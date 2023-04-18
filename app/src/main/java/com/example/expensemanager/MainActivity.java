@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-        // Redirect to SignUp activity
+        // Redirect to   activity
         mSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

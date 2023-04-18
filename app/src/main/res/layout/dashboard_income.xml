@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Type:"
+        android:text="Nhóm:"
         android:gravity="center"
         android:padding="5dp"
         android:id="@+id/type_Income_ds"
@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="match_parent"
         android:gravity="center"
-        android:text="Amount:"
+        android:text="Giá trị:"
         android:padding="5dp"
         android:layout_marginTop="10dp"
         android:textColor="@android:color/holo_green_dark"
@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2 Dec 2020"
+            android:text="Ngày/Tháng/Năm"
             android:padding="5dp"
             android:textAppearance="?android:textAppearanceMedium"
             android:gravity="center"
