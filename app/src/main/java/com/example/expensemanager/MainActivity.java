@@ -72,13 +72,13 @@ public class MainActivity extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             mDialog.dismiss();
-                            Toast.makeText(getApplicationContext(),"Login Successful!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext()," Đăng nhập thành công",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                             finish();
                         }
                         else{
                             mDialog.dismiss();
-                            Toast.makeText(getApplicationContext(),"Login Failed!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Đăng nhập thất bại",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

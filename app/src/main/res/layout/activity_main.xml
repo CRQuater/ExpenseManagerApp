@@ -30,7 +30,8 @@
                 android:layout_margin="10dp"
                 android:hint="Email"
                 android:id="@+id/email_login"
-
+                android:drawableStart="@drawable/name"
+                android:drawablePadding="16dp"
                 />
             <EditText
                 android:layout_width="match_parent"
@@ -39,7 +40,8 @@
                 android:inputType="textPassword"
                 android:hint="Password"
                 android:id="@+id/password_login"
-
+                android:drawableStart="@drawable/password"
+                android:drawablePadding="16dp"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -56,6 +58,7 @@
                 android:layout_margin="5dp"
                 android:id="@+id/forgot_password"
                 android:text="@string/forgot_password"
+                android:textColor="@color/blue_400"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -64,7 +67,7 @@
                 android:layout_margin="5dp"
                 android:id="@+id/signup"
                 android:text="@string/don_t_have_an_account_yet_signup_now"
-
+                android:textColor="@color/blue_400"
                 />
         </LinearLayout>
     </ScrollView>

@@ -16,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -39,11 +41,6 @@ import org.w3c.dom.Text;
 import java.text.DateFormat;
 import java.util.Date;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DashboardFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class DashboardFragment extends Fragment {
 
 
@@ -96,7 +93,10 @@ public class DashboardFragment extends Fragment {
 
         mIncomeDatabase.keepSynced(true);
         mExpenseDatabase.keepSynced(true);
-        //Connect Floating Button to layout
+
+        //Drop down menu
+
+        //Connect Floating Button dto layout
 
         fab_main=myview.findViewById(R.id.fb_main_plus_btn);
         fab_income=myview.findViewById(R.id.income_ft_btn);
@@ -249,11 +249,17 @@ public class DashboardFragment extends Fragment {
         LayoutInflater inflater=LayoutInflater.from(getActivity());
 
         View myview=inflater.inflate(R.layout.custom_layout_for_insertdata, null);
+        String[] transaction = getResources().getStringArray(R.array.typesOfTransactions);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(requireContext(), R.layout.dropdown_item, transaction);
+        AutoCompleteTextView textView = (AutoCompleteTextView)
+                myview.findViewById(R.id.autoCompleteTextView);
+
+        textView.setAdapter(arrayAdapter);
         mydialog.setView(myview);
         final AlertDialog dialog=mydialog.create();
         dialog.setCancelable(false);
         EditText edtamount=myview.findViewById(R.id.amount);
-        EditText edtType=myview.findViewById(R.id.type_edt);
+        EditText edtType=myview.findViewById(R.id.autoCompleteTextView);
         EditText edtNote=myview.findViewById(R.id.note_edt);
 
         Button saveBtn=myview.findViewById(R.id.btnSave);
@@ -318,7 +324,7 @@ public class DashboardFragment extends Fragment {
         final AlertDialog dialog=mydialog.create();
         dialog.setCancelable(false);
         EditText edtamount=myview.findViewById(R.id.amount);
-        EditText edttype=myview.findViewById(R.id.type_edt);
+        EditText edttype=myview.findViewById(R.id.autoCompleteTextView);
         EditText edtnote=myview.findViewById(R.id.note_edt);
 
         Button saveBtn=myview.findViewById(R.id.btnSave);

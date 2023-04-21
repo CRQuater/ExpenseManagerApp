@@ -43,7 +43,7 @@
                 android:inputType="textPassword"
                 android:hint="Password"
                 android:id="@+id/password_signup"
-                android:drawableStart="@drawable/name"
+                android:drawableStart="@drawable/password"
                 android:drawablePadding="16dp"
                 android:ems="10"
                 android:textSize="20sp"
@@ -62,8 +62,9 @@
                 android:gravity="center"
                 android:layout_margin="5dp"
                 android:id="@+id/login"
-                android:text="Đã có tài khoản, hãy đăng nhập!"
+                android:text="Đã có tài khoản? Hãy đăng nhập!"
                 android:textSize="20sp"
+                android:textColor="@color/blue_400"
                 />
         </LinearLayout>
     </ScrollView>
